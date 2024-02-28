@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+.mini-app {
+  border-radius: 20px 20px 20px 20px;
+  background-color: #007aff;
+  max-width: 375px;
+  ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #007aff;
+  width: 375px;
+  height: 148px;
+  border-radius: 20px 20px 0px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.base-panelheader {
+  position: relative;
+  width: 375px;
+  height: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.status-bar {
+  position: relative;
+  width: 375px;
+  height: 48px;
+}
+
+.time {
+  position: absolute;
+  width: 54px;
+  height: 18px;
+  top: 15px;
+  left: 22.5px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 17.9px;
+  letter-spacing: -0.3px;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.layout {
+  position: relative;
+  width: 375px;
+  height: 52px;
+  gap: 4px;
+}
+
+.content-panelheader {
+  position: absolute;
+  width: 375px;
+  height: 52px;
+  padding: 4px 8px 4px 0px;
+}
+
+.buttons {
   display: flex;
+  position: absolute;
+  width: 88px;
+  height: 32px;
+  top: 10px;
+  left: 279px;
+}
+
+.button-more {
+  border: none;
+  width: 44px;
+  height: 32px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 17px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #096bd5;
+}
+
+.dots,
+.close {
+  color: #FFFFFF;
+  background-color: #096bd5;
+}
+
+.separator {
+  position: absolute;
+  width: 1px;
+  height: 24px;
+  top: 4px;
+  left: 43.5px;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+.button-cancel {
+  border: none;
+  width: 44px;
+  height: 32px;
+  left: 44px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 17px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #096bd5;
+}
+
+.label {
+  position: absolute;
+  width: 343px;
+  height: 32px;
+  top: 88px;
+  left: 17px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.body {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 375px;
+  background-color: #f2f2f7;
+  height: 656px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.input-form {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 351px;
+  height: 75px;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+}
+
+.input-name {
+  border: none;
+  display: flex;
+  width: 315px;
+  height: 50px;
+  border-radius: 12px;
+  gap: 8px;
+  background-color: #F2F2F7;
+  padding-left: 15px;
+}
+
+.input-name::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.button-block {
+  position: absolute;
+  bottom: 50px;
+}
+
+button:disabled {
+  opacity: 0.4;
+}
+
+.send-button {
+  width: 351px;
+  height: 50px;
+  padding: 9px 105px;
+  border-radius: 12px;
+  background-color: #007aff;
+  color: #FFFFFF;
+}
+
+.text-button {
+  width: 115px;
+  height: 32px;
+  padding: 8px, 12px, 8px, 12px;
+  border-radius: 2px;
+  gap: 4px;
+}
+
+.checkbox-form {
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  border-radius: 16px;
+  padding: 15px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  min-height: 50px; 
+  max-height: 400px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.check-label {
+  width: 327px;
+  height: 24px;
+  gap: 8px;
+  background-color: #FFFFFF;
+}
+
+.spacer {
+  width: 351px;
+  height: 24px;
+  display: block;
+  background-color: #F2F2F7;
+}
+
+.iphone-indicator {
+  position: absolute;
+  bottom: 0px;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #F2F2F7;
+  width: 375px;
+  height: 34px;
+  border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.iphone-line {
+  width: 135px;
+  height: 5px;
+  bottom: 20px;
+  left: 120px;
+  border-radius: 3px;
+  background-color: #322D2A;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox-button-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
+
